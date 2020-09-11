@@ -157,12 +157,12 @@ namespace CustomSpawns.Data
                     {
                         throw new Exception("the node 'MaximumOnMap' cannot be less than 1!");
                     }
-
-                    dat.InheritClanFromSettlement = node["GetClanFromSettlement"] == null ? false : bool.Parse(node["GetClanFromSettlement"].InnerText);
-                    dat.PartyType = node["PartyType"] == null ? MobileParty.PartyTypeEnum.Bandit : StringToPartyTypeEnumIfInvalidBandit(node["PartyType"].InnerText);
-                    dat.ChanceOfSpawn = node["ChanceOfSpawn"] == null? 1 : float.Parse(node["ChanceOfSpawn"].InnerText);
-                    dat.Name = node["Name"] == null ? "Unnamed" : node["Name"].InnerText;
-                    dat.ChanceInverseConstant = node["ChanceInverseConstant"] == null? 0 : float.Parse(node["ChanceInverseConstant"].InnerText);
+                }
+                dat.InheritClanFromSettlement = node["GetClanFromSettlement"] == null ? false : bool.Parse(node["GetClanFromSettlement"].InnerText); t);
+                dat.PartyType = node["PartyType"] == null ? MobileParty.PartyTypeEnum.Bandit : StringToPartyTypeEnumIfInvalidBandit(node["PartyType"].InnerText);
+                dat.ChanceOfSpawn = node["ChanceOfSpawn"] == null ? 1 : float.Parse(node["ChanceOfSpawn"].InnerText);
+                dat.Name = node["Name"] == null ? "Unnamed" : node["Name"].InnerText;
+                dat.ChanceInverseConstant = node["ChanceInverseConstant"] == null? 0 : float.Parse(node["ChanceInverseConstant"].InnerText);
                     dat.RepeatSpawnRolls = node["RepeatSpawnRolls"] == null? 1 : int.Parse(node["RepeatSpawnRolls"].InnerText);
 
                     dat.PatrolAroundSpawn = node["PatrolAroundSpawn"] == null ? false : bool.Parse(node["PatrolAroundSpawn"].InnerText);
@@ -401,10 +401,10 @@ namespace CustomSpawns.Data
         public InformationMessage deathMessage { get; set; }
         public bool PatrolAroundSpawn { get; set; }
         public bool InheritClanFromSettlement { get; set; }
-        private int numberSpawned = 0;
+    private int numberSpawned = 0;
 
         public void IncrementNumberSpawned()
-        {
+    {
             numberSpawned++;
         }
 

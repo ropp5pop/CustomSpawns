@@ -178,7 +178,6 @@ namespace CustomSpawns.Spawn
                                 foreach (var accomp in data.SpawnAlongWith)
                                 {
                                     MobileParty juniorParty = Spawner.SpawnParty(spawnSettlement, data.SpawnClan, accomp.templateObject, data.PartyType, new TextObject(accomp.name), data.InheritClanFromSettlement);
-                                    Spawner.HandleAIChecks(juniorParty, data, spawnSettlement); //junior party has same AI behaviour as main party. TODO in future add some junior party AI and reconstruction.
                                 }
                                 //message if available
                                 if (data.spawnMessage != null)

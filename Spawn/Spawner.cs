@@ -20,7 +20,7 @@ namespace CustomSpawns.Spawn
     {
 
 
-        public static MobileParty SpawnParty(Settlement spawnedSettlement, Clan clan, PartyTemplateObject templateObject,MobileParty.PartyTypeEnum partyType, TextObject partyName = null, bool IsInheritClan = false)
+        public static MobileParty SpawnParty(Settlement spawnedSettlement, Clan clan, PartyTemplateObject templateObject, MobileParty.PartyTypeEnum partyType, TextObject partyName = null, bool IsInheritClan = false)
         {
             //get name and show message.
             TextObject textObject = partyName ?? clan.Name;
@@ -43,7 +43,6 @@ namespace CustomSpawns.Spawn
 
             return mobileParty;
         }
-
         private static void InitParty(MobileParty banditParty, TextObject name, Clan faction, Settlement homeSettlement)
         {
             banditParty.Name = name;
